@@ -23,6 +23,7 @@ const {
   TraversaalSearch,
   StructuredWolfram,
   TavilySearchResults,
+  TNGDSearch,
 } = require('../');
 const { loadToolSuite } = require('./loadToolSuite');
 const { loadSpecs } = require('./loadSpecs');
@@ -165,6 +166,7 @@ const loadTools = async ({
     'dall-e': OpenAICreateImage,
     'stable-diffusion': functions ? StructuredSD : StableDiffusionAPI,
     'azure-ai-search': functions ? StructuredACS : AzureAISearch,
+    'tngd-embeddings-search': TNGDSearch,
     CodeBrew: CodeBrew,
     traversaal_search: TraversaalSearch,
   };

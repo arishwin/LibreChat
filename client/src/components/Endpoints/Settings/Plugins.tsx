@@ -65,14 +65,10 @@ export default function Settings({ conversation, setOption, models, readonly }: 
             </Label>
             <Input
               id="chatGptLabel"
-              disabled={readonly || toolsSelected}
+              disabled={readonly}
               value={chatGptLabel || ''}
               onChange={(e) => setChatGptLabel(e.target.value ?? null)}
-              placeholder={
-                toolsSelected
-                  ? localize('com_endpoint_disabled_with_tools_placeholder')
-                  : localize('com_endpoint_openai_custom_name_placeholder')
-              }
+              placeholder={localize('com_endpoint_openai_custom_name_placeholder')}
               className={cn(
                 defaultTextProps,
                 'flex h-10 max-h-10 w-full resize-none px-3 py-2',
@@ -90,14 +86,12 @@ export default function Settings({ conversation, setOption, models, readonly }: 
             </Label>
             <TextareaAutosize
               id="promptPrefix"
-              disabled={readonly || toolsSelected}
+              disabled={readonly}
               value={promptPrefix || ''}
               onChange={(e) => setPromptPrefix(e.target.value ?? null)}
-              placeholder={
-                toolsSelected
-                  ? localize('com_endpoint_disabled_with_tools_placeholder')
-                  : localize('com_endpoint_plug_set_custom_instructions_for_gpt_placeholder')
-              }
+              placeholder={localize(
+                'com_endpoint_plug_set_custom_instructions_for_gpt_placeholder',
+              )}
               className={cn(
                 defaultTextProps,
                 'flex max-h-[138px] min-h-[100px] w-full resize-none px-3 py-2 ',

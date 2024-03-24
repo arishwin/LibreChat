@@ -6,6 +6,7 @@ const AzureAiSearch = require('./AzureAiSearch');
 const OpenAICreateImage = require('./DALL-E');
 const StableDiffusionAPI = require('./StableDiffusion');
 const SelfReflectionTool = require('./SelfReflection');
+const TNGDSearch = require('./TNGDSearch');
 
 // Structured Tools
 const DALLE3 = require('./structured/DALLE3');
@@ -25,6 +26,7 @@ module.exports = {
   // Basic Tools
   CodeBrew,
   AzureAiSearch,
+  TNGDSearch,
   GoogleSearchAPI,
   WolframAlphaAPI,
   OpenAICreateImage,
